@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url(images/backen.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top {
+    top: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(14, 2, 117), rgb(28, 164, 228));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    word-spacing: 0.5rem;
+    user-select: none;
+}
+
+.container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 80px;
+}
+
+#name,
+#email,
+#website,
+#url {
+    width: 40rem;
+    min-width: fit-content;
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(219, 217, 217);
+    outline: 3px solid rgba(19, 2, 95, 0.578);
+    font-size: 17px;
+}
+
+#name:hover,
+#email:hover,
+#website:hover,
+#url:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#name:focus,
+#email:focus,
+#website:focus,
+#url:focus {
+    outline: 3px solid rgba(0, 0, 48, 0.711);
+}
+
+.name,
+.email,
+.gender,
+.email,
+.skills,
+.image {
+    display: flex;
+    align-items: center;
+    gap: 8.4vw;
+    font-size: 1.75rem;
+}
+.website{
+    display: flex;
+    align-items: center;
+    gap: 6.7vw;
+    font-size: 1.75rem;
+}
+
+
+.text-p {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.text-p label {
+    display: flex;
+    gap: 3px;
+    align-items: baseline;
+}
+
+.button {
+    display: flex;
+    gap: 6vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit,
+#reset{ 
+    
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, rgb(14, 2, 117), rgb(28, 164, 228));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+   
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.button #submit:active,
+.button #reset:active {
+    background-color: black;
+    box-shadow: none;
+}
+
+.button #submit:hover,
+.button #reset:hover {
+    color: black;
+   
+}
+
+.line {
+    margin: auto;
+    width: 3px;
+    height: 80vh;
+    background-color: rgb(2, 32, 153);
+    border-radius: 33px;
+}
+
+.op-box {
+    width: 50%;
+
+}
+
+.output {
+    padding: 45px;
+    
+}
+
+h2 {
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid rgb(56, 0, 153);
+    margin-bottom: 5px;
+}
+
+.cardContainer {
+    
+    overflow-y: auto;
+    height: 73vh;
+}
+
+.card {
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 145, 255, 0.59);
+    padding: 20px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    gap: 5vw;
+}
+
+.card img {
+    
+    border-radius: 1rem;
+    width: 150px;
+    height: 150px;
+}
+
+.info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.card .info a {
+    color: rgb(89, 10, 248);
+    text-decoration: solid;
+}
+
+.card .info a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.card .info button {
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, rgb(14, 2, 117), rgb(28, 164, 228));
+    color: white;
+    
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card .info button:hover {
+    color: black;
+    box-shadow: none;
+}
+
+@media only screen and (max-width:1000px) {
+    .container .line {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .form {
+        width: 100%;
+    }
+
+    .op-box {
+        width: 100%;
+
+    }
+
+    .name,
+    .email,
+    .website,
+    .image,
+    .skills,
+    .gender {
+        justify-content: space-around;
+    }
+
+    .gender {
+        padding-right: 17vw;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .container .form form {
+        padding: 27px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .output .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card img {
+        margin: auto;
+
+    }
+}
